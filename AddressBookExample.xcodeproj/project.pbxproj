@@ -13,6 +13,7 @@
 		E48817AF1D6D7B300075BA87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48817AD1D6D7B300075BA87 /* Main.storyboard */; };
 		E48817B11D6D7B300075BA87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E48817B01D6D7B300075BA87 /* Assets.xcassets */; };
 		E48817B41D6D7B300075BA87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48817B21D6D7B300075BA87 /* LaunchScreen.storyboard */; };
+		E48817BD1D6D7ED40075BA87 /* CreateContact.m in Sources */ = {isa = PBXBuildFile; fileRef = E48817BC1D6D7ED40075BA87 /* CreateContact.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		E48817B01D6D7B300075BA87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E48817B31D6D7B300075BA87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E48817B51D6D7B300075BA87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E48817BB1D6D7ED40075BA87 /* CreateContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateContact.h; sourceTree = "<group>"; };
+		E48817BC1D6D7ED40075BA87 /* CreateContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateContact.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 		E48817A31D6D7B300075BA87 /* AddressBookExample */ = {
 			isa = PBXGroup;
 			children = (
+				E48817BB1D6D7ED40075BA87 /* CreateContact.h */,
+				E48817BC1D6D7ED40075BA87 /* CreateContact.m */,
 				E48817A71D6D7B300075BA87 /* AppDelegate.h */,
 				E48817A81D6D7B300075BA87 /* AppDelegate.m */,
 				E48817AA1D6D7B300075BA87 /* ViewController.h */,
@@ -151,6 +156,7 @@
 			files = (
 				E48817AC1D6D7B300075BA87 /* ViewController.m in Sources */,
 				E48817A91D6D7B300075BA87 /* AppDelegate.m in Sources */,
+				E48817BD1D6D7ED40075BA87 /* CreateContact.m in Sources */,
 				E48817A61D6D7B300075BA87 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +308,7 @@
 				E48817BA1D6D7B300075BA87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
