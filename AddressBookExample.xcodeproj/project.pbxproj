@@ -14,6 +14,7 @@
 		E48817B11D6D7B300075BA87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E48817B01D6D7B300075BA87 /* Assets.xcassets */; };
 		E48817B41D6D7B300075BA87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48817B21D6D7B300075BA87 /* LaunchScreen.storyboard */; };
 		E48817BD1D6D7ED40075BA87 /* CreateContact.m in Sources */ = {isa = PBXBuildFile; fileRef = E48817BC1D6D7ED40075BA87 /* CreateContact.m */; };
+		E48817C01D6DB3890075BA87 /* FetchingContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = E48817BF1D6DB3890075BA87 /* FetchingContacts.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		E48817B51D6D7B300075BA87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E48817BB1D6D7ED40075BA87 /* CreateContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateContact.h; sourceTree = "<group>"; };
 		E48817BC1D6D7ED40075BA87 /* CreateContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateContact.m; sourceTree = "<group>"; };
+		E48817BE1D6DB3890075BA87 /* FetchingContacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchingContacts.h; sourceTree = "<group>"; };
+		E48817BF1D6DB3890075BA87 /* FetchingContacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchingContacts.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 			children = (
 				E48817BB1D6D7ED40075BA87 /* CreateContact.h */,
 				E48817BC1D6D7ED40075BA87 /* CreateContact.m */,
+				E48817BE1D6DB3890075BA87 /* FetchingContacts.h */,
+				E48817BF1D6DB3890075BA87 /* FetchingContacts.m */,
 				E48817A71D6D7B300075BA87 /* AppDelegate.h */,
 				E48817A81D6D7B300075BA87 /* AppDelegate.m */,
 				E48817AA1D6D7B300075BA87 /* ViewController.h */,
@@ -158,6 +163,7 @@
 				E48817A91D6D7B300075BA87 /* AppDelegate.m in Sources */,
 				E48817BD1D6D7ED40075BA87 /* CreateContact.m in Sources */,
 				E48817A61D6D7B300075BA87 /* main.m in Sources */,
+				E48817C01D6DB3890075BA87 /* FetchingContacts.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "CreateContact.h"
+#import "FetchingContacts.h"
 
 @interface ViewController ()
 
@@ -17,7 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [CreateContact run];
+    //[CreateContact run];
+    [FetchingContacts run];
 }
 
 - (void)didReceiveMemoryWarning {

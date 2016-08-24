@@ -23,7 +23,7 @@
     
     CNLabeledValue *iPhoneTelephone =
     [[CNLabeledValue alloc] initWithLabel:CNLabelPhoneNumberiPhone
-                                    value:[CNPhoneNumber phoneNumberWithStringValue:@"(532)123 45 67"]];
+                                    value:[CNPhoneNumber phoneNumberWithStringValue:@"(532)1234567"]];
     contact.phoneNumbers = @[ iPhoneTelephone ];
     
     CNMutablePostalAddress *homeAddress = [CNMutablePostalAddress new];
