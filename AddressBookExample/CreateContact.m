@@ -14,29 +14,29 @@
 + (void)run {
     CNMutableContact *contact = [CNMutableContact new];
     
-    contact.givenName = @"Alper";
-    contact.familyName = @"Karataş";
+    contact.givenName = @"Jane";
+    contact.familyName = @"Doe";
     
-    CNLabeledValue *homeEmail = [[CNLabeledValue alloc] initWithLabel:CNLabelHome value:@"karatas.alper@yahoo.com"];
-    CNLabeledValue *workEmail = [[CNLabeledValue alloc] initWithLabel:CNLabelWork value:@"malperk@gmail.com"];
+    CNLabeledValue *homeEmail = [[CNLabeledValue alloc] initWithLabel:CNLabelHome value:@"jane.doe@example.com"];
+    CNLabeledValue *workEmail = [[CNLabeledValue alloc] initWithLabel:CNLabelWork value:@"jane.doe@work.example.com"];
     contact.emailAddresses = @[ homeEmail, workEmail ];
     
     CNLabeledValue *iPhoneTelephone =
     [[CNLabeledValue alloc] initWithLabel:CNLabelPhoneNumberiPhone
-                                    value:[CNPhoneNumber phoneNumberWithStringValue:@"(532)1234567"]];
+                                    value:[CNPhoneNumber phoneNumberWithStringValue:@"(555) 555-0100"]];
     contact.phoneNumbers = @[ iPhoneTelephone ];
     
     CNMutablePostalAddress *homeAddress = [CNMutablePostalAddress new];
     
-    homeAddress.street = @"My Street Address";
-    homeAddress.city = @"İstanbul";
-    homeAddress.postalCode = @"34000";
+    homeAddress.street = @"1 Example Street";
+    homeAddress.city = @"Springfield";
+    homeAddress.postalCode = @"12345";
     contact.postalAddresses = @[ [[CNLabeledValue alloc] initWithLabel:CNLabelHome value:homeAddress] ];
     
     NSDateComponents *birthday = [NSDateComponents new];
     birthday.day = 1;
-    birthday.month = 8;
-    birthday.year = 1982;
+    birthday.month = 1;
+    birthday.year = 1990;
     contact.birthday = birthday;
     
     // Save Values

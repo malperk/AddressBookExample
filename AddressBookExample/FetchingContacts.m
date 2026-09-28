@@ -12,7 +12,7 @@
 @implementation FetchingContacts
 
 + (void)run {
-    NSPredicate *predicate = [CNContact predicateForContactsMatchingName:@"alper"];
+    NSPredicate *predicate = [CNContact predicateForContactsMatchingName:@"Jane"];
     NSArray *keysToFetch = @[ CNContactGivenNameKey, CNContactFamilyNameKey,[CNContactFormatter descriptorForRequiredKeysForStyle:CNContactFormatterStyleFullName]];
     CNContactStore *store = [CNContactStore new];
     NSError *err;
