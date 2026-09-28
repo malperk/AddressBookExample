@@ -7,9 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Contacts/Contacts.h>
+
+NS_ASSUME_NONNULL_BEGIN
 
 @interface CreateContact : NSObject
 
 + (void)run;
 
+// Builds the placeholder contact that run saves to the address book.
++ (CNMutableContact *)sampleContact;
+
++ (BOOL)saveContact:(CNMutableContact *)contact toStore:(CNContactStore *)store error:(NSError **)error;
+
 @end
+
+NS_ASSUME_NONNULL_END

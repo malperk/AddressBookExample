@@ -7,11 +7,19 @@
 //
 
 #import "CreateContact.h"
-#import <Contacts/Contacts.h>
 
 @implementation CreateContact
 
 + (void)run {
+    NSError *err;
+    [self saveContact:[self sampleContact] toStore:[CNContactStore new] error:&err];
+    
+    if (err) {
+        NSLog(@"%@", err.localizedDescription);
+    }
+}
+
++ (CNMutableContact *)sampleContact {
     CNMutableContact *contact = [CNMutableContact new];
     
     contact.givenName = @"Jane";
@@ -39,16 +47,13 @@
     birthday.year = 1990;
     contact.birthday = birthday;
     
-    // Save Values
-    CNContactStore *store = [CNContactStore new];
+    return contact;
+}
+
++ (BOOL)saveContact:(CNMutableContact *)contact toStore:(CNContactStore *)store error:(NSError **)error {
     CNSaveRequest *saveRequest = [CNSaveRequest new];
     [saveRequest addContact:contact toContainerWithIdentifier:nil];
-    NSError *err;
-    [store executeSaveRequest:saveRequest error:&err];
-    
-    if (err) {
-        NSLog(@"%@", err.localizedDescription);
-    }
+    return [store executeSaveRequest:saveRequest error:error];
 }
 
 @end

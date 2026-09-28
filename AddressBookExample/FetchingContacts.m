@@ -7,23 +7,39 @@
 //
 
 #import "FetchingContacts.h"
-#import <Contacts/Contacts.h>
 
 @implementation FetchingContacts
 
 + (void)run {
-    NSPredicate *predicate = [CNContact predicateForContactsMatchingName:@"Jane"];
-    NSArray *keysToFetch = @[ CNContactGivenNameKey, CNContactFamilyNameKey,[CNContactFormatter descriptorForRequiredKeysForStyle:CNContactFormatterStyleFullName]];
-    CNContactStore *store = [CNContactStore new];
     NSError *err;
-    NSArray *contacts = [store unifiedContactsMatchingPredicate:predicate keysToFetch:keysToFetch error:&err];
+    NSArray<NSString *> *names = [self fullNamesOfContactsMatchingName:@"Jane" inStore:[CNContactStore new] error:&err];
     if (err) {
         NSLog(@"%@", err.localizedDescription);
     } else {
-        for (CNContact *contact in contacts) {
-            NSLog(@"%@", [CNContactFormatter stringFromContact:contact style:CNContactFormatterStyleFullName]);
+        for (NSString *name in names) {
+            NSLog(@"%@", name);
         }
     }
+}
+
++ (NSArray<NSString *> *)fullNamesOfContactsMatchingName:(NSString *)name
+                                                 inStore:(CNContactStore *)store
+                                                   error:(NSError **)error {
+    NSPredicate *predicate = [CNContact predicateForContactsMatchingName:name];
+    NSArray *keysToFetch = @[ CNContactGivenNameKey, CNContactFamilyNameKey,[CNContactFormatter descriptorForRequiredKeysForStyle:CNContactFormatterStyleFullName]];
+    NSArray<CNContact *> *contacts = [store unifiedContactsMatchingPredicate:predicate keysToFetch:keysToFetch error:error];
+    if (!contacts) {
+        return nil;
+    }
+    
+    NSMutableArray<NSString *> *names = [NSMutableArray arrayWithCapacity:contacts.count];
+    for (CNContact *contact in contacts) {
+        NSString *fullName = [CNContactFormatter stringFromContact:contact style:CNContactFormatterStyleFullName];
+        if (fullName) {
+            [names addObject:fullName];
+        }
+    }
+    return names;
 }
 
 @end
